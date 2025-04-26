@@ -24,8 +24,8 @@ const Convert = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[rgb(10,10,10)] flex items-center justify-center px-4 py-6 sm:px-6 lg:px-8 w-[calc(100%-15rem)] ml-auto">
-      <div className="w-[70%] mx-auto bg-gray-900 rounded-xl shadow-xl p-4 sm:p-6 space-y-6 border border-gray-800">
+    <div className="min-h-screen bg-[#1e1e20] flex items-center justify-center px-4 py-6 sm:px-6 lg:px-8 w-[calc(100%-15rem)] ml-auto pt-30 max-[600px]:w-full max-[600px]:pb-30">
+      <div className="w-[70%] mx-auto px-10 py-10 sm:p-6 space-y-6 max-[872px]:w-[100%]">
         <h2 className="text-xl sm:text-2xl font-semibold text-white text-center">
           Convert Coin Assets
         </h2>
@@ -38,7 +38,7 @@ const Convert = () => {
               Available: {availableBalances[fromCurrency]} {fromCurrency}
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-3 p-3 sm:p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <div className="flex flex-col sm:flex-row items-center gap-3 p-3 sm:p-4 rounded-lg border border-gray-700 bg-[#2d2d30]">
             <div className="flex items-center gap-2 w-full sm:w-auto">
               <div className={`w-8 h-8 rounded-full ${currencyConfig[fromCurrency].bgColor} flex items-center justify-center shrink-0`}>
                 <span className="text-white text-sm">{currencyConfig[fromCurrency].symbol}</span>
@@ -79,7 +79,7 @@ const Convert = () => {
               Available: {availableBalances[toCurrency]} {toCurrency}
             </span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-3 p-3 sm:p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <div className="flex flex-col sm:flex-row items-center gap-3 p-3 sm:p-4 rounded-lg border border-gray-700 bg-[#2d2d30]">
             <div className="flex items-center gap-2 w-full sm:w-auto">
               <div className={`w-8 h-8 rounded-full ${currencyConfig[toCurrency].bgColor} flex items-center justify-center shrink-0`}>
                 <span className="text-white text-sm">{currencyConfig[toCurrency].symbol}</span>

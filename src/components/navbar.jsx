@@ -1,6 +1,8 @@
 import { FaUser } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { MdAccountBalanceWallet } from "react-icons/md";
+import { FaHeadphones } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function BinanceNavbar() {
   return (
@@ -22,13 +24,14 @@ export default function BinanceNavbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
+          <FaHeadphones className="text-2xl"/>
           <button className="flex items-center gap-1 bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">
             <MdAccountBalanceWallet /> Deposit
           </button>
-          <div className="flex items-center gap-2">
+          <Link className="flex items-center gap-2" to='/dashboard/profile'>
             <FaUser className="text-yellow-400" />
             <span className="hidden md:inline">Profile</span>
-          </div>
+          </Link>
         </div>
         </div>
 

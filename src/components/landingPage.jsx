@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import { FaBitcoin } from "react-icons/fa";
-import { MdHeadphones } from "react-icons/md";
+import { FaHeadphones } from "react-icons/fa6";
 import { MdOutlineSecurity } from "react-icons/md";
 import { FaBoltLightning } from "react-icons/fa6";
 import { IoDiamond } from "react-icons/io5";
@@ -9,7 +9,7 @@ import { IoDiamond } from "react-icons/io5";
 const LandingPage = () => {
   const features = [
     { title: "Secure Trading", description: "Enterprise-grade security for your digital assets", icon: <MdOutlineSecurity /> },
-    { title: "24/7 Support", description: "Round-the-clock customer service and support", icon:<MdHeadphones /> },
+    { title: "24/7 Support", description: "Round-the-clock customer service and support", icon:<FaHeadphones /> },
     { title: "Low Fees", description: "Competitive trading fees and free deposits", icon: <IoDiamond /> },
     { title: "Instant Transfers", description: "Lightning-fast cryptocurrency transfers", icon: <FaBoltLightning />}
   ];

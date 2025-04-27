@@ -1,4 +1,6 @@
 import React from 'react';
+import { Headphones, Settings } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const userProfile = {
@@ -31,12 +33,14 @@ const Profile = () => {
       }
     ]
   };
+  const navigate=useNavigate()
 
   return (
     <div className="min-h-screen bg-[#1e1e20] p-4 w-[calc(100%-15rem)] ml-auto pt-30 max-[600px]:w-full max-[600px]:pb-30">
       {/* Profile Header */}
       <div className="bg-[#1e1e20] rounded-lg p-6 shadow-sm mb-6">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 justify-between max-[670px]:flex-col max-[670px]:items-start max-[670px]:gap-10">
+          <div className='flex items-center gap-5'>
           <img
             src={userProfile.profileImage}
             alt="Profile"
@@ -47,10 +51,10 @@ const Profile = () => {
             <p className="text-white">{userProfile.email}</p>
             <p className="text-sm text-white">Member since {userProfile.joinDate}</p>
           </div>
-          <div className="ml-auto">
-            <button className="bg-yellow-400 text-black px-4 py-2 rounded-lg hover:bg-yellow-500">
-              Edit Profile
-            </button>
+          </div>
+          <div className="flex items-center gap-5">
+            <Headphones className={`w-6 h-6 text-white cursor-pointer`} />
+            <Settings className={`w-6 h-6 text-white cursor-pointer`} onClick={()=>{navigate('/dashboard/settings')}}/>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Headphones, Settings } from "lucide-react";
 import avatar from "../assets/react.svg"; // Replace with your avatar image path
 const colors = {
   // Main colors
@@ -202,14 +201,8 @@ export default function Mining() {
   return (
     <div className={`min-h-screen ${colors.background} ${colors.textPrimary} w-[calc(100%-15rem)] ml-auto pt-20 max-[600px]:w-full max-[600px]:pb-30`}>
       <header className="p-4 border-b border-gray-800 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <img src={avatar} alt="avatar" className="h-8 w-8 rounded-full " />
-          <h1 className="text-xl font-bold">Invest</h1>
-        </div>
-        <div className="flex items-center space-x-4">
-          <Headphones className={`w-6 h-6 text-white cursor-pointer`} />
-          <Settings className={`w-6 h-6 text-white cursor-pointer`} />
-        </div>
+        
+        <h1 className="text-xl font-bold">Investments</h1>
       </header>
 
       <main className="container mx-auto py-6 px-4">

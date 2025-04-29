@@ -1,136 +1,119 @@
-import React from 'react';
-import { Headphones, Settings } from "lucide-react";
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  Headphones,
+  Settings,
+  Wallet2,
+  FileText,
+  Briefcase,
+  Banknote,
+  UploadCloud,
+  Bitcoin,
+  Gem,
+  Plus,
+  BadgeDollarSign,
+  Repeat,
+  UserCircle,
+  LockKeyhole,
+  UsersRound,
+  ShieldCheck,
+} from "lucide-react";
 
 const Profile = () => {
-  const userProfile = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    joinDate: "Jan 2024",
-    verificationLevel: 2,
-    profileImage: "https://api.dicebear.com/7.x/avataaars/svg?seed=John",
-    activities: [
-      {
-        id: 1,
-        type: "Deposit",
-        amount: "0.05 BTC",
-        date: "2024-03-15",
-        status: "completed"
-      },
-      {
-        id: 2,
-        type: "Withdrawal",
-        amount: "1.2 ETH",
-        date: "2024-03-14",
-        status: "pending"
-      },
-      {
-        id: 3,
-        type: "Trade",
-        amount: "500 USDT",
-        date: "2024-03-13",
-        status: "completed"
-      }
-    ]
+  const userData = {
+    id: "200064",
+    name: "Ashrafujiaman Babu",
+    creditScore: 100,
+    vipLevel: 1,
   };
-  const navigate=useNavigate()
+
+  const shortcuts = [
+    { id: 1, title: "Add Fund", icon: Wallet2 },
+    { id: 2, title: "Fund Logs", icon: FileText },
+    { id: 3, title: "Assets", icon: Briefcase },
+    { id: 4, title: "Withdraw", icon: Banknote },
+    { id: 5, title: "Withdraw Logs", icon: UploadCloud },
+    { id: 6, title: "Crypto Mining", icon: Bitcoin },
+    { id: 7, title: "Mineral Mining", icon: Gem },
+    { id: 8, title: "New Coin", icon: Plus },
+    { id: 9, title: "Listed Coin", icon: BadgeDollarSign },
+    { id: 10, title: "Transactions", icon: Repeat },
+    { id: 11, title: "Convert", icon: Repeat },
+  ];
+
+  const recommendations = [
+    { id: 1, title: "Account", icon: UserCircle },
+    { id: 2, title: "Change Password", icon: LockKeyhole },
+    { id: 3, title: "Refer", icon: UsersRound },
+    { id: 4, title: "KYC Verification", icon: ShieldCheck },
+  ];
+
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1e1e20] p-4 w-[calc(100%-15rem)] ml-auto pt-30 max-[600px]:w-full max-[600px]:pb-30">
-      {/* Profile Header */}
-      <div className="bg-[#1e1e20] rounded-lg p-6 shadow-sm mb-6">
-        <div className="flex items-center gap-6 justify-between max-[670px]:flex-col max-[670px]:items-start max-[670px]:gap-10">
-          <div className='flex items-center gap-5'>
+    <div className="w-[calc(100%-15rem)] ml-auto pt-30 min-h-screen bg-[#1e1e20] p-4 py-8 max-[600px]:w-full max-[600px]:pb-30">
+      {/* User Profile Header */}
+      <div className="bg-[#0f0f0f] text-white rounded-lg p-6 shadow-sm mb-6">
+        <div className="flex items-center gap-4">
           <img
-            src={userProfile.profileImage}
+            src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`}
             alt="Profile"
-            className="w-24 h-24 rounded-full border-4 border-yellow-400"
+            className="w-16 h-16 rounded-lg"
           />
           <div>
-            <h1 className="text-2xl font-bold text-white">{userProfile.name}</h1>
-            <p className="text-white">{userProfile.email}</p>
-            <p className="text-sm text-white">Member since {userProfile.joinDate}</p>
-          </div>
-          </div>
-          <div className="flex items-center gap-5">
-            <Headphones className={`w-6 h-6 text-white cursor-pointer`} />
-            <Settings className={`w-6 h-6 text-white cursor-pointer`} onClick={()=>{navigate('/dashboard/settings')}}/>
+            <div className="flex items-center gap-3 max-[500px]:flex-col max-[500px]:items-start mb-3">
+              <h1 className="text-xl font-bold">{userData.name}</h1>
+              <span className="text-sm text-gray-600">ID: {userData.id}</span>
+            </div>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="bg-yellow-100 text-yellow-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                Credit Score: {userData.creditScore}
+              </span>
+              <span className="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded">
+                VIP-{userData.vipLevel}
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Verification Status */}
-      <div className="bg-[#1e1e20] rounded-lg p-6 shadow-sm mb-6">
-        <h2 className="text-xl font-semibold mb-4 text-white">Verification Level</h2>
-        <div className="flex gap-4 mb-4">
-          {[1, 2, 3].map((level) => (
-            <div
-              key={level}
-              className={`flex-1 p-4 rounded-lg border ${
-                level <= userProfile.verificationLevel
-                  ? 'bg-[#2d2d30] border-emerald-500'
-                  : 'bg-[#2d2d30] border-gray-200'
-              }`}
+      {/* Top Buttons */}
+      <div className="flex items-center gap-5 mb-5">
+        <Headphones className="w-6 h-6 text-white cursor-pointer" />
+        <Settings
+          className="w-6 h-6 text-white cursor-pointer"
+          onClick={() => navigate("/dashboard/settings")}
+        />
+      </div>
+
+      {/* Shortcuts Section */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold mb-10 text-white">Shortcut</h2>
+        <div className="grid grid-cols-4 gap-6">
+          {shortcuts.map((item) => (
+            <button
+              key={item.id}
+              className="flex flex-col items-center text-white hover:text-yellow-500 transition-all"
             >
-              <div className="flex items-center justify-between">
-                <span className="font-medium text-white">Level {level}</span>
-                {level <= userProfile.verificationLevel && (
-                  <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                )}
-              </div>
-            </div>
+              <item.icon className="w-8 h-8 mb-2" />
+              <span className="text-sm text-gray-400">{item.title}</span>
+            </button>
           ))}
         </div>
-        {userProfile.verificationLevel < 3 && (
-          <button className="text-yellow-400 font-medium hover:text-yellow-500">
-            Complete Verification →
-          </button>
-        )}
       </div>
 
-      {/* Recent Activity */}
-      <div className="bg-[#1e1e20] rounded-lg p-6 shadow-sm">
-        <h2 className="text-xl font-semibold mb-4 text-white">Recent Activity</h2>
-        <div className="space-y-4">
-          {userProfile.activities.map((activity) => (
-            <div key={activity.id} className="flex items-center justify-between p-4 rounded-lg bg-[#2d2d30]">
-              <div className="flex items-center gap-4">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center
-                  ${activity.type === 'Deposit' ? 'bg-green-100 text-green-600' :
-                    activity.type === 'Withdrawal' ? 'bg-red-100 text-red-600' :
-                    'bg-blue-100 text-blue-600'}`}>
-                  {activity.type === 'Deposit' && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                    </svg>
-                  )}
-                  {activity.type === 'Withdrawal' && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
-                    </svg>
-                  )}
-                  {activity.type === 'Trade' && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                    </svg>
-                  )}
-                </div>
-                <div>
-                  <p className="font-medium text-white">{activity.type}</p>
-                  <p className="text-sm text-white">{activity.amount}</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <p className="text-sm text-white">{activity.date}</p>
-                <p className={`text-sm ${
-                  activity.status === 'completed' ? 'text-emerald-500' : 'text-orange-500'
-                }`}>
-                  {activity.status.charAt(0).toUpperCase() + activity.status.slice(1)}
-                </p>
-              </div>
-            </div>
+      {/* Recommendations Section */}
+      <div>
+        <h2 className="text-xl font-bold mb-10 text-white">Recommend</h2>
+        <div className="grid grid-cols-4 gap-6">
+          {recommendations.map((item) => (
+            <button
+              key={item.id}
+              className="flex flex-col items-center text-white hover:text-yellow-500 transition-all"
+            >
+              <item.icon className="w-8 h-8 mb-2" />
+              <span className="text-sm text-gray-400">{item.title}</span>
+            </button>
           ))}
         </div>
       </div>

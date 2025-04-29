@@ -4,12 +4,12 @@ import { MdAccountBalanceWallet } from "react-icons/md";
 import { FaHeadphones } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-export default function BinanceNavbar() {
+export default function NavbarUser() {
   return (
     <nav className="bg-black text-white px-6 py-5 shadow-lg fixed top-0 w-full z-20">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="text-yellow-400 font-bold text-2xl">CryptoTrade</div>
+        <div className="text-yellow-400 font-bold text-2xl flex items-center gap-3">GMP Exchange <img src='../../public/logo.png' className="w-10"/></div>
 
         <div className="flex gap-5 items-center">
         {/* Search Bar */}
@@ -25,11 +25,8 @@ export default function BinanceNavbar() {
         {/* Actions */}
         <div className="flex items-center gap-4">
           <FaHeadphones className="text-2xl"/>
-          <button className="flex items-center gap-1 bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-300">
-            <MdAccountBalanceWallet /> Deposit
-          </button>
-          <Link className="flex items-center gap-2" to='/dashboard/profile'>
-            <FaUser className="text-yellow-400" />
+          <Link className="flex items-center gap-2" to='/user/profile'>
+            <FaUser className="text-2xl" />
             <span className="hidden md:inline">Profile</span>
           </Link>
         </div>

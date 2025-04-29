@@ -3,12 +3,12 @@ export default function Login() {
     const navigate=useNavigate()
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-950 p-4 py-8">
-      <div className="w-full max-w-md bg-gray-900 text-white p-8 rounded-2xl shadow-2xl">
+        <div className="min-h-screen flex items-center justify-center bg-[#0f0f0f] p-4 py-8">
+      <div className="w-full max-w-md bg-[#1e1e20] text-white p-8 rounded-2xl shadow-2xl">
         <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
           Login
         </h2>
-        <form className="space-y-6" onSubmit={()=>{navigate('/dashboard')}}>
+        <form className="space-y-6" onSubmit={(e)=>{e.preventDefault();navigate('/user')}}>
       <div>
         <label className="block mb-2 text-sm">Email</label>
         <input
@@ -25,6 +25,7 @@ export default function Login() {
           placeholder="Enter your password"
         />
       </div>
+      <p className="text-yellow-400 text-center w-full">Forgot password?</p>
       <button
         type="submit"
         className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded"

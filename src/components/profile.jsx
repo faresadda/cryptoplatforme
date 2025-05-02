@@ -82,7 +82,7 @@ const Profile = () => {
         <Headphones className="w-6 h-6 text-white cursor-pointer hover:text-yellow-500 transition-colors" />
         <Settings
           className="w-6 h-6 text-white cursor-pointer hover:text-yellow-500 transition-colors"
-          onClick={() => navigate("/dashboard/settings")}
+          onClick={() => navigate("/user/settings")}
         />
       </div>
 

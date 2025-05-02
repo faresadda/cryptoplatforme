@@ -80,7 +80,7 @@ const LandingPage = () => {
         </nav>
 
         <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-20">
             <div className="flex justify-between items-center gap-10 max-[945px]:flex-wrap max-[945px]:justify-center max-[945px]:gap-40 max-[945px]:pt-20">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-6xl font-bold leading-tight max-w-150">
@@ -100,7 +100,7 @@ const LandingPage = () => {
                   </button>
                 </div>
               </div>
-              <FaBitcoin className="text-yellow-400 text-[15rem] mr-40" />
+              <FaBitcoin className="text-yellow-400 text-[15rem]" />
             </div>
           </div>
         </div>

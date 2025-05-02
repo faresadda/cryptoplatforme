@@ -10,7 +10,7 @@ export default function NavbarUser() {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="text-yellow-400 font-bold text-2xl flex items-center gap-3">
-          GMP Exchange <img src="../../public/logo.png" className="w-10" />
+          GMP Exchange <img src="/logo.png" className="w-10" />
         </div>
 
         <div className="flex gap-5 items-center">

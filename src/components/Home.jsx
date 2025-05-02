@@ -170,7 +170,7 @@ export default function Home() {
                   className={`w-4 h-4 ml-1 ${colors.textSecondary}`}
                 />
               </div>
-              <Link className="flex space-x-2" to='/dashboard/settings'>
+              <Link className="flex space-x-2" to='/user/settings'>
                 <button
                   className={`${colors.inputBg} ${colors.hoverBg} p-2 rounded-full`}
                 >

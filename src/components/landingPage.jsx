@@ -64,7 +64,7 @@ const LandingPage = () => {
             </div>
             <div className="flex space-x-4">
               <button
-                className="px-4 py-2 rounded-lg text-yellow-400 hover:text-yellow-300 transition-colors"
+                className={`px-4 py-2 rounded-lg text-yellow-400 hover:text-yellow-300 transition-colors ${innerWidth<400 && 'hidden'}`}
                 onClick={() => navigate("/login")}
               >
                 Login
@@ -73,7 +73,7 @@ const LandingPage = () => {
                 className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-300 transition-colors"
                 onClick={() => navigate("/signup")}
               >
-                Sign Up
+                Sign up
               </button>
             </div>
           </div>
@@ -81,7 +81,7 @@ const LandingPage = () => {
 
         <div className="relative pt-32 pb-20 sm:pt-40 sm:pb-24">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex justify-between items-center gap-10 max-[945px]:flex-wrap max-[945px]:justify-center">
+            <div className="flex justify-between items-center gap-10 max-[945px]:flex-wrap max-[945px]:justify-center max-[945px]:gap-40 max-[945px]:pt-20">
               <div className="space-y-8">
                 <h1 className="text-4xl sm:text-6xl font-bold leading-tight max-w-150">
                   Trade Crypto with

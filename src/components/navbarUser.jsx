@@ -18,7 +18,7 @@ export default function NavbarUser() {
           <div className="hidden md:flex items-center bg-[#333333] px-3 py-1 rounded">
             <FiSearch className="text-gray-400" />
             <input
-              type="text"
+              type="search"
               placeholder="Search"
               className="bg-transparent text-white ml-2 focus:outline-none"
             />

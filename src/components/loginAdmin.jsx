@@ -13,7 +13,7 @@ export default function Login() {
         <label className="block mb-2 text-sm">Email</label>
         <input
           type="email"
-          className="w-full p-2 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="w-full p-2 bg-[rgb(73,73,73)] text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
           placeholder="Enter your email"
         />
       </div>
@@ -21,7 +21,7 @@ export default function Login() {
         <label className="block mb-2 text-sm">Password</label>
         <input
           type="password"
-          className="w-full p-2 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="w-full p-2 bg-[rgb(73,73,73)] text-white rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
           placeholder="Enter your password"
         />
       </div>

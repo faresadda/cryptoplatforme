@@ -51,12 +51,12 @@ const Profile = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-[calc(100%-15rem)] ml-auto pt-30 max-[600px]:w-full max-[600px]:pb-30 min-h-screen bg-[#1e1e20] p-4 pb-20 mt-15">
+    <div className="w-[calc(100%-15rem)] ml-auto pt-30 max-[600px]:w-full max-[600px]:pb-30 min-h-screen bg-[#1e1e20] p-4 pb-20">
       {/* User Profile Header */}
       <div className="bg-[#0f0f0f] text-white rounded-lg p-4 md:p-6 shadow-lg mb-6">
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
           <img
-            src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${userData.name}`}
+            src="/logo.png"
             alt="Profile"
             className="w-16 h-16 rounded-lg"
           />
